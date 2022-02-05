@@ -1,0 +1,24 @@
+import sys
+sys.setrecursionlimit (10000)
+
+def max(arr,idx,n):
+   # Write your code here
+    if(idx==len(arr)-1):
+       return arr[idx]
+    misa=max(arr,idx+1,n)
+    if(misa>arr[idx]):
+        return misa
+    else:
+        return arr[idx]
+
+
+
+
+def main():
+    n=int(input())
+    arr=[]
+    for i in range(n):
+        arr.append(int(input()))
+    res=max(arr,0,n)
+    print(res)
+main()    
